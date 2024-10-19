@@ -1,0 +1,251 @@
+
+**** 06/01/21 18:23:50 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rect"  [ C:\Users\CIO\Documents\orcad (2)\orcad\RectificadorCarga\rectcarga-PSpiceFiles\SCHEMATIC1\rect.sim 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "rect.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source RECTCARGA
+X_S2    N177338 0 OUT N177614 SCHEMATIC1_S2 
+V_V36         N177386 0  
++PULSE 0 1 13.33m 0.1u 0.1u 10m 20m
+V_V39         N178294 0  
++PULSE 0 1 3.33m 0.1u 0.1u 10m 20m
+V_V26         N177858 0  AC 1
++SIN 0 80 60 0 0 0
+L_L3         N177956 N1778061  10mH  
+C_C5         SALIDA OUT  {C} IC=0 TC=0,0 
+R_R2         N177870 N177462  0.1 TC=0,0 
+X_S4    N178152 0 N177462 SALIDA SCHEMATIC1_S4 
+V_V31         N1777440 0  AC 1
++SIN 0 80 60 0 0 120
+V_V34         N177188 0  
++PULSE 0 1 0 0.1u 0.1u 10m 20m
+R_R3         N177884 N177614  0.1 TC=0,0 
+D_D3         N177614 OUT power_Dbreak 
+V_V38         N178232 0  
++PULSE 0 1 16.67m 0.1u 0.1u 10m 20m
+R_R4         N1778061 N177628  0.1 TC=0,0 
+X_S5    N178232 0 N177614 SALIDA SCHEMATIC1_S5 
+X_S3    N177386 0 OUT N177628 SCHEMATIC1_S3 
+X_S6    N178294 0 N177628 SALIDA SCHEMATIC1_S6 
+V_V37         N178152 0  
++PULSE 0 1 10m 0.1u 0.1u 10m 20m
+D_D6         SALIDA N177628 power_Dbreak 
+D_D4         SALIDA N177614 power_Dbreak 
+D_D5         N177628 OUT power_Dbreak 
+D_D2         SALIDA N177462 power_Dbreak 
+L_L2         N1777440 N177884  10mH  
+D_D1         N177462 OUT power_Dbreak 
+L_L1         N177858 N177870  10mH  
+X_S1    N177188 0 OUT N177462 SCHEMATIC1_S1 
+V_V33         N177956 0  AC 1
++SIN 0 80 60 0 0 240
+V_V35         N177338 0  
++PULSE 0 1 6.67m 0.1u 0.1u 10m 20m
+R_R_ref         0 N1790062  1  
+V_Vload         N179026 0 DC 1  
+X_X1         N179026 0 N1790062 OUT SALIDA ZX
+.PARAM  rl=30 c=2500u
+
+.subckt SCHEMATIC1_S2 1 2 3 4  
+S_S2         3 4 1 2 _S2
+RS_S2         1 2 1G
+.MODEL         _S2 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1
+.ends SCHEMATIC1_S2
+
+.subckt SCHEMATIC1_S4 1 2 3 4  
+S_S4         3 4 1 2 _S4
+RS_S4         1 2 1G
+.MODEL         _S4 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1
+.ends SCHEMATIC1_S4
+
+.subckt SCHEMATIC1_S5 1 2 3 4  
+S_S5         3 4 1 2 _S5
+RS_S5         1 2 1G
+.MODEL         _S5 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1
+.ends SCHEMATIC1_S5
+
+.subckt SCHEMATIC1_S3 1 2 3 4  
+S_S3         3 4 1 2 _S3
+RS_S3         1 2 1G
+.MODEL         _S3 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1
+.ends SCHEMATIC1_S3
+
+.subckt SCHEMATIC1_S6 1 2 3 4  
+S_S6         3 4 1 2 _S6
+RS_S6         1 2 1G
+.MODEL         _S6 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1
+.ends SCHEMATIC1_S6
+
+.subckt SCHEMATIC1_S1 1 2 3 4  
+S_S1         3 4 1 2 _S1
+RS_S1         1 2 1G
+.MODEL         _S1 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1
+.ends SCHEMATIC1_S1
+
+**** RESUMING rect.cir ****
+.END
+
+**** 06/01/21 18:23:50 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rect"  [ C:\Users\CIO\Documents\orcad (2)\orcad\RectificadorCarga\rectcarga-PSpiceFiles\SCHEMATIC1\rect.sim 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               power_Dbreak    
+          IS    1.000000E-12 
+          RS     .1          
+          TT  100.000000E-12 
+         CJO  500.000000E-15 
+
+
+**** 06/01/21 18:23:50 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rect"  [ C:\Users\CIO\Documents\orcad (2)\orcad\RectificadorCarga\rectcarga-PSpiceFiles\SCHEMATIC1\rect.sim 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_S2._S2        X_S4._S4        X_S5._S5        X_S3._S3        
+         RON    1               1               1               1            
+        ROFF    1.000000E+06    1.000000E+06    1.000000E+06    1.000000E+06 
+         VON    1               1               1               1            
+        VOFF    0               0               0               0            
+
+
+               X_S6._S6        X_S1._S1        
+         RON    1               1            
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+**** 06/01/21 18:23:50 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-rect"  [ C:\Users\CIO\Documents\orcad (2)\orcad\RectificadorCarga\rectcarga-PSpiceFiles\SCHEMATIC1\rect.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)     .3397  (SALIDA)    -.3397 (X_X1.6)    -.3397 (N177188)    0.0000    
+
+(N177338)    0.0000                   (N177386)    0.0000                       
+
+(N177462) 244.4E-21                   (N177614)   35.2440                       
+
+(N177628)  -35.2440                   (N177858)    0.0000                       
+
+(N177870)    0.0000                   (N177884)   69.2820                       
+
+(N177956)  -69.2820                   (N178152)    0.0000                       
+
+(N178232)    0.0000                   (N178294)    0.0000                       
+
+(N179026)    1.0000                   (N1777440)   69.2820                      
+
+(N1778061)  -69.2820                  (N1790062)     .6794                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V36        0.000E+00
+    V_V39        0.000E+00
+    V_V26        2.444E-18
+    V_V31       -3.404E+02
+    V_V34        0.000E+00
+    V_V38        0.000E+00
+    V_V37        0.000E+00
+    V_V33        3.404E+02
+    V_V35        0.000E+00
+    V_Vload     -1.000E-09
+    X_X1.vsense   6.794E-01
+
+    TOTAL POWER DISSIPATION   4.72E+04  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  1.547E-09.
+         Time step =  218.3E-21, minimum allowable step size =  1.000E-18
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)     .6796  (SALIDA)    0.0000 (X_X1.6)    0.0000 (N177188)     .0155    
+
+(N177338)    0.0000                   (N177386)    0.0000                       
+
+(N177462)     .3398                   (N177614)   35.5840                       
+
+(N177628)  -34.9040                   (N177858) 46.66E-06                       
+
+(N177870)     .3398                   (N177884)   69.6220                       
+
+(N177956)  -69.2820                   (N178152)    0.0000                       
+
+(N178232)    0.0000                   (N178294)    0.0000                       
+
+(N179026)    1.0000                   (N1777440)   69.2820                      
+
+(N1778061)  -68.9420                  (N1790062)     .6719                  
+
+
+**** Interrupt ****
