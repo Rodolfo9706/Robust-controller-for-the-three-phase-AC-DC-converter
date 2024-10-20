@@ -43,3 +43,16 @@ Before running any Simulink model, execute the corresponding `.m` file containin
 
 ```matlab
 run('paramet.m')
+
+```
+
+3. **Run Simulink Simulations:**  
+
+    Open MATLAB and load the required .m file with the parameters (as indicated above).
+    Navigate to the folder containing the desired Simulink model (e.g., Simulink_Simulation/).
+    Open and run the .slx file to visualize the system's behavior.
+
+4. **Run PSpice Simulations:**  
+
+    Open OrCAD PSpice and load the project file (rectcarga.opj) or the schematic (RECTCARGA.DSN).
+    Run the simulations to analyze the electrical behavior of the rectifier at the component level.
