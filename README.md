@@ -38,11 +38,5 @@ To run the simulations, you need the following software:
    git clone https://github.com/Rodolfo9706/Robustcontroller-for-three-phase-converters.git
    cd Robustcontroller-for-three-phase-converters ```
 
-## **Installation and Usage Guide**  
 
-### 2. **Prepare MATLAB Parameters:**  
-Before running any Simulink model, execute the corresponding `.m` file containing the system or control parameters. Example:
-
-```matlab
-run('paramet.m')
 
