@@ -37,6 +37,3 @@ To run the simulations, you need the following software:
    ```bash
    git clone https://github.com/Rodolfo9706/Robustcontroller-for-three-phase-converters.git
    cd Robustcontroller-for-three-phase-converters ```
-
-
-
