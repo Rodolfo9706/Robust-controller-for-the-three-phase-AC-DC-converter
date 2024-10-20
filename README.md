@@ -25,7 +25,7 @@ The repository contains the following folders:
 ## **Prerequisites**  
 To run the simulations, you need the following software:  
 
-- **MATLAB/Simulink** (preferably version 2023a or later).  
+- **MATLAB/Simulink** (preferably version 2021a or later).  
 - **OrCAD PSpice** (compatible with the provided files).  
 - **Power Electronics Toolbox** installed in Simulink.
 
